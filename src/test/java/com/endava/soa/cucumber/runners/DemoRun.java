@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:features/",
-        glue = "com.endava.soa.cucumber.steps",
-        tags = {"@Must,@Optional"},
-//        tags = {"@Must","@Optional"},
-        plugin = {"pretty", "html:target/cucumber"},
-        dryRun = false)
+        features = "src/test/resources/features/",
+        glue = {"com.endava.soa.cucumber.steps"},
+       // tags = {"@Must","@Optional"}
+       //tags = {"~@Must"},
+        plugin = {"json:target/cucumber1.json"}
+)
 public class DemoRun {
 }
